@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"myvpc","Source":"./vpc","Dir":"vpc"},{"Key":"subnet-1","Source":"./vpc","Dir":"vpc"},{"Key":"firewall","Source":"./firewall","Dir":"firewall"},{"Key":"natgateway","Source":"./natgateway","Dir":"natgateway"},{"Key":"subnet-2","Source":"./vpc","Dir":"vpc"},{"Key":"","Source":"","Dir":"."}]}

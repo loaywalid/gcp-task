@@ -19,7 +19,6 @@ module "firewall" {
 module "natgateway" {
     source = "./natgateway"
     nat-name = "tf-nat"
-    router-name = "tf-router"
     region-name = "us-central1"
     subnet-name = module.myvpc.subnet-name
     router-region = "us-central1"
@@ -27,8 +26,22 @@ module "natgateway" {
 }
 
 
+module "private-instance" {
+  source = "./instance"
+  instance-name = "tf-instance"
+  instance-type = "f1-micro"
+  zone = "us-central1-b"
+  image = "ubuntu-os-cloud/ubuntu-2204-lts"
+  subnet-id = module.myvpc.subnet-name
+    
+}
 
 
+module "cluster" {
+  source = "./cluster"
+  vpc-name= module.myvpc.vpc-id
+  subnet-name= module.myvpc.restricted-subnet
+}
 
 
 

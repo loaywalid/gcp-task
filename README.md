@@ -23,8 +23,54 @@ https://github.com/atethares/DevOps-Challenge-Demo-Code
 
 # Run Project 
 1 - Run infrastructure using terraform 
-  terrafrom inint 
-  terraform plan
+
+ 	
+	terrafrom init 
+  
+  	terraform plan
+	
 	terraform apply
 	
-	<img width="1440" alt="Screenshot 2023-02-09 at 10 02 41 PM" src="https://user-images.githubusercontent.com/43528941/217924661-ceab5007-2328-4e13-88b9-9ec3927fa721.png">
+<img width="1440" alt="Screenshot 2023-02-09 at 10 02 41 PM" src="https://user-images.githubusercontent.com/43528941/217925334-7053eb10-86b8-4740-b19e-52832fead226.png">
+
+
+2- Clone repo  https://github.com/atefhares/DevOps-Challenge-Demo-Code 
+
+	build image 
+	
+	push the image to GCR
+	
+
+run these commands:
+
+	docker build -t gcp-python 
+	docker tag gcp-python gcr.io/loayproject/gcp-python
+	docker push gcr.io/loayproject/gcp-python
+
+
+3- pull redis image from dockerhub and push it to your GCR 
+
+		docker pull redis
+		
+	        docker tag redis gcr.io/loayproject/project-redis
+		
+	        docker push gcr.io/loayproject/project-redis:latest
+		
+		
+4- SSH into private vm to 
+
+ 		create the K8S file that's needed and apply it using kubectl 
+		
+
+5- accesing the python application 
+
+
+<img width="1398" alt="Screenshot 2023-02-09 at 10 23 21 PM" src="https://user-images.githubusercontent.com/43528941/217928775-e6336032-e4aa-48a5-896f-dcdfb8acdcf0.png">
+
+
+
+
+
+
+	
+	
